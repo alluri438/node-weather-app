@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback(body.error.info,undefined)
         }
         else {
-            callback(undefined,'Weather Feels like in your current location' + ' ' + body.current.feelslike + ' degree')
+            callback(undefined,`current temperate is ${body.current.temperature} degrees and feels like ${body.current.feelslike} degrees`)
         }
     })
 }
